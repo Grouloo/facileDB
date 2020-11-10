@@ -1,14 +1,14 @@
-#facileDB
+# facileDB
 
 Basic NodeJS noSQL DB manager
 
-##Initialize
+## Initialize
 
-###Syntax
+### Syntax
 
 ``new facileDB(parameters)`` 
 
-####Parameters {Object}
+#### Parameters {Object}
 
 ```JSON
 {
@@ -24,9 +24,9 @@ Basic NodeJS noSQL DB manager
 }
 ```
 
-###Examples
+### Examples
 
-####Using the default values
+#### Using the default values
 
 ```JavaScript
 const facileDB = require('facileDB')
@@ -34,7 +34,7 @@ const facileDB = require('facileDB')
 const myDB = new facileDB()
 ```
 
-####Disabling all parameters
+#### Disabling all parameters
 
 ```JavaScript
 const facileDB = require('facileDB')
@@ -48,21 +48,21 @@ const myDB = new facileDB({
 })
 ```
 
-##Create a Dataset
+## Create a Dataset
 
-###Syntax
+### Syntax
 
 ```JavaScript
 facileDB.createDataset(name, model)
 ```
 
-####Parameters
+#### Parameters
 
-#####name {String}
+##### name {String}
 
 The name of your new Dataset
 
-#####model {Object}
+##### model {Object}
 
 ```JavaScript
 {
@@ -82,7 +82,7 @@ array
 date
 ```
 
-###Example
+### Example
 
 Let's create a Dataset to store our users' informations.
 
@@ -104,9 +104,9 @@ Console :
 */
 ```
 
-##Remove a Dataset
+## Remove a Dataset
 
-###Syntax
+### Syntax
 
 ```JavaScript
 facileDB.removeDataset(name)
@@ -114,11 +114,11 @@ facileDB.removeDataset(name)
 
 ####Parameters
 
-#####name {String}
+##### name {String}
 
 The name of your new Dataset
 
-###Example
+### Example
 
 Let's create a Dataset to stock our users' informations.
 
@@ -136,21 +136,21 @@ Console :
 ```
 
 
-##Post content into a Dataset
+## Post content into a Dataset
 
-###Syntax
+### Syntax
 
 ```JavaScript
 facileDB.post(name, query)
 ```
 
-####Parameters
+#### Parameters
 
-#####name {String}
+##### name {String}
 
 Name of the Dataset
 
-#####query {Array}
+##### query {Array}
 
 Array containing the Entries to post into the Dataset
 
@@ -164,7 +164,7 @@ Array containing the Entries to post into the Dataset
 ]
 ```
 
-###Examples
+### Examples
 
 Let's insert something into our Dataset *users*
 
@@ -205,21 +205,21 @@ myDB.post('users', [
 ])
 ```
 
-##Get entries from a Dataset
+## Get entries from a Dataset
 
-###Syntax
+### Syntax
 
 ```JavaScript
 facileDB.get(name, query, parameters (optionnal))
 ```
 
-####Parameters
+#### Parameters
 
-#####name {String}
+##### name {String}
 
 Name of the Dataset
 
-#####query {Object|String}
+##### query {Object|String}
 
 To get selected Entries
 
@@ -237,7 +237,7 @@ To get all Entries in the Dataset
 "*"
 ```
 
-#####parameters {Object} (Optionnal)
+##### parameters {Object} (Optionnal)
 
 ```JavaScript
 {
@@ -251,7 +251,7 @@ To get all Entries in the Dataset
 }
 ```
 
-###Examples
+### Examples
 
 Getting all entries in the Dataset :
 
@@ -411,21 +411,21 @@ Console :
 */ 
 ```
 
-##Update entries
+## Update entries
 
-###Syntax
+### Syntax
 
 ```JavaScript
 facileDB.update(name, query, update)
 ```
 
-####Parameters
+#### Parameters
 
-#####name {String}
+##### name {String}
 
 Name of the Dataset
 
-#####query {Object|String}
+##### query {Object|String}
 
 Entries to update
 
@@ -437,7 +437,7 @@ Entries to update
 }
 ```
 
-#####update {Object}
+##### update {Object}
 
 Fields to update
 
@@ -448,7 +448,7 @@ Fields to update
 }
 ```
 
-###Example
+### Example
 
 Let's try to update an entry from our Dataset *users*
 
@@ -484,21 +484,21 @@ Console :
 */
 ```
 
-##Remove entries
+## Remove entries
 
-###Syntax
+### Syntax
 
 ```JavaScript
 facileDB.remove(name, query)
 ```
 
-####Parameters
+#### Parameters
 
-#####name {String}
+##### name {String}
 
 Name of the Dataset
 
-#####query {Object|String}
+##### query {Object|String}
 
 Entries to remove
 
@@ -510,7 +510,7 @@ Entries to remove
 }
 ```
 
-###Example
+### Example
 
 Removing an entry from our Dataset *users*
 
@@ -540,22 +540,26 @@ Console :
 */ 
 ```
 
-##Empty a Dataset
+## Empty a Dataset
 
-###Syntax
+### Syntax
 
 ```JavaScript
 facileDB.empty(name)
 ```
 
-####Parameters
+#### Parameters
 
-#####name {String}
+##### name {String}
 
 Name of the Dataset to empty.
 
-###Example
+### Example
 
 ```JavaScript
+const facileDB = require('facileDB')
 
+const myDB = new facileDB()
+
+myDB.empty('users')
 ```
