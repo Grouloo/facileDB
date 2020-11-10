@@ -1,0 +1,9 @@
+{
+  "name": "facileDB",
+  "version": "1.0.0",
+  "description": "Basic DB manager using Node",
+  "main": "dist/index.js",
+  "repository": "https://github.com/Grouloo/facileDB.git",
+  "author": "elliott",
+  "license": "MIT"
+}
