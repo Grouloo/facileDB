@@ -10,7 +10,7 @@ Basic NodeJS noSQL DB manager
 
 #### Parameters {Object}
 
-```JSON
+```JavaScript
 {
 	path: {String}, /* Path to the directory of the DB. By default, the DB will be stocked in the DB directory of the module. */
 	
